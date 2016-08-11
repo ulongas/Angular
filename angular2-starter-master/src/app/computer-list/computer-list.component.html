@@ -1,0 +1,18 @@
+<div *ngFor="let computer of computers$ | async">
+
+  <br/>
+  <br/>
+
+  <hr/>
+  
+  <div>
+  Computer name: {{computer.name}}
+  </div>
+
+  <div>
+    <button (click)="onNavigate(computer)">go to computer</button>
+  </div>
+
+  <hr/>
+
+</div>

@@ -1,0 +1,31 @@
+
+  <br/>
+  <br/>
+
+<div>
+  Computer ID: {{computerId}}
+</div>
+
+<div *ngIf="computer">
+
+  <br/>
+
+  <table>
+      <td>
+        <tr>Computer name:</tr>
+        <tr>IP adress:</tr> 
+        <tr>Total RAM:</tr> 
+        <tr>Username:</tr>
+      </td>
+      <td>
+        <tr>{{computer.name}}</tr> 
+        <tr>{{computer.ipAddress}}</tr> 
+        <tr>{{computer.memory}} GB</tr> 
+        <tr>{{computer.user}}</tr>
+      </td>
+  </table>
+</div>
+
+<div>
+    <button (click)="onNavigate(data)">show usage data</button>
+</div>

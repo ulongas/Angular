@@ -1,0 +1,21 @@
+<div *ngFor="let host of hosts$ | async ">
+  <div *ngIf="host.clusterId == clusterId">
+
+    Host ID: {{host.hostId}}
+    <br/>
+    ClusterId: {{clusterId}}
+    <br/>
+    Host name: {{host.name}}
+    <br/>
+    State: {{host.state}}
+    <br/>
+    ProcessorCount: {{host.processorCount}}
+    <br/>
+    PhysicalMemory: {{host.physicalMemory}}
+    <br/>
+
+    <button (click)="onNavigate(host)">go to host</button>
+
+    <hr/>
+  </div>
+</div>

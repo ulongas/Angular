@@ -1,0 +1,31 @@
+<br/>
+
+<p>
+  Usage data of computer: {{computerId}}
+</p>
+
+<div *ngIf="usageData$">
+  <div *ngFor="let ud of usageData$ | async">
+
+    <br/>
+    <hr/>
+
+    <table>
+      <td>
+        <tr>CPU usage:</tr> 
+        <tr>Ram usage:</tr> 
+        <tr>Available disk space:</tr> 
+        <tr>Time:</tr> 
+      </td>
+      <td>
+        <tr>{{ud.cpuUsage}} %</tr> 
+        <tr>{{ud.memoryUsage}} %</tr> 
+        <tr>{{ud.availableDiskSpace}} GB</tr> 
+        <tr>{{ud.timeStamp}}</tr> 
+      </td>
+    </table>
+
+    <hr/>
+    
+    </div>
+</div>

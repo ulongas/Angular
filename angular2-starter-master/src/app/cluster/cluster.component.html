@@ -1,0 +1,21 @@
+<div>
+  Cluster ID: {{clusterId}}
+</div>
+
+<div *ngIf="cluster">
+
+  <br/>
+
+  <table>
+      <td>
+        <tr>Cluster name:</tr>
+      </td>
+      <td>
+        <tr>{{cluster.name}}</tr>
+      </td>
+  </table>
+</div>
+
+<div>
+    <button (click)="onNavigate(hosts)">show hosts list</button>
+</div>
